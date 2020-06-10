@@ -1,5 +1,5 @@
 ul
-  for team in teams
-    li= team.name
+  each team in teams
+    li #{team.name} was in #{team.fifa} in league #{team.league} with rating #{team.rating}
   else
     li sorry, no teams!
