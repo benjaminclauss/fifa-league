@@ -6,6 +6,7 @@ exports.team_list = function(req, res, next) {
         .exec(function (err, teams) {
             if (err) { return next(err); }
             //Successful, so render
-            res.render('team_list', {teams: teams });
+            // res.render('team_list', {teams: teams });
+            res.send(teams)
         });
 };
